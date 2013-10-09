@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/add_pad"
+        android:title="Add"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom"
+        android:icon="@android:drawable/btn_plus"/>
+    <item android:id="@+id/sync"
+        android:title="Sync"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom"
+        android:icon="@android:drawable/ic_popup_sync"/>
+    <item android:id="@+id/logout"
+        android:title="Logout"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom"/>
+</menu>

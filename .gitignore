@@ -1,0 +1,10 @@
+.gradle
+/local.properties
+/.idea/workspace.xml
+.DS_Store
+AGPad-server.iml
+AGPad-server.ipr
+AGPad-server.iws
+build/
+cookies.txt
+out/
