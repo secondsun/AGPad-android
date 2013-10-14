@@ -18,6 +18,7 @@ import org.jboss.aeropad.callback.LoginCallback;
 import org.jboss.aeropad.callback.LogoutCallback;
 import org.jboss.aeropad.callback.PadCallback;
 import org.jboss.aeropad.auth.CookieAuthModule;
+import org.jboss.aeropad.fragment.AddPadFragment;
 import org.jboss.aeropad.socket.WebsocketPushRegistrar;
 import org.jboss.aeropad.vo.Pad;
 
@@ -123,4 +124,9 @@ public class AeropadApplication extends Application {
 
     }
 
+    public void addPad(AddPadFragment addPadFragment, String padName, AddPadFragment.AddPadFragmentCallback callback) {
+        Pad pad = new Pad();
+        pad.setName(padName);
+        pipeline.get("pad", addPadFragment, this).save(pad, callback);
+    }
 }
