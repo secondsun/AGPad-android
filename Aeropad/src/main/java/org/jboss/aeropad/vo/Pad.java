@@ -41,4 +41,9 @@ public class Pad {
     public void setOwnerName(String ownerName) {
         this.ownerName = ownerName;
     }
+
+    public String toString() {
+        return name;
+    }
+
 }

@@ -12,9 +12,14 @@ import java.util.List;
  * Created by summers on 10/8/13.
  */
 public class PadCallback extends AbstractSupportFragmentCallback<List<Pad>> {
+
+    public PadCallback(String tag) {
+        super(tag, PadCallback.class);
+    }
+
     @Override
     public void onSuccess(List<Pad> pads) {
-        Toast.makeText(getFragment().getActivity(), pads.get(0).getName(), Toast.LENGTH_LONG).show();
+        ((HandlePads)getFragment()).handlePads(pads);
     }
 
     @Override

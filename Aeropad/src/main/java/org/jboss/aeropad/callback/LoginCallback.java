@@ -19,13 +19,8 @@ public class LoginCallback extends AbstractSupportFragmentCallback<HeaderAndBody
     public void onSuccess(HeaderAndBody headerAndBody) {
         Toast.makeText(getFragment().getActivity(), "Success", Toast.LENGTH_LONG).show();
         ((MainActivity)getFragment().getActivity()).postLogin();
-
-
         PushConfig pushConfig = new PushConfig();
-        pushConfig.setPushServerURI(URI.create("ws://10.0.2.2:8080/pad/42"));
-        pushConfig.setSecret(headerAndBody.getHeader("Set-Cookie").toString());
-
-
+        pushConfig.setPushServerURI(URI.create("ws://10.0.2.2:8080/pad/525d661045ce3ede7f31029f"));
         ((AeropadApplication)getFragment().getActivity().getApplication()).register(pushConfig);
     }
 

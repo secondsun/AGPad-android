@@ -1,57 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:padding="30dp">
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/username"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_toRightOf="@+id/textView" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Username"
-        android:id="@+id/textView"
-        android:layout_alignBottom="@+id/username"
-        android:layout_alignParentLeft="true" />
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:src="@drawable/aerogear_logo"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Password"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/textView"
-        android:layout_alignRight="@+id/textView" />
+        android:layout_gravity="right"
+        android:paddingBottom="50dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="Pad Demo"/>
 
     <EditText
-        android:layout_width="wrap_content"
+        android:id="@+id/pad_id"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/password"
-        android:layout_below="@+id/username"
-        android:layout_alignParentRight="true"
-        android:layout_toRightOf="@+id/textView" />
+        android:hint="Existing Pad Id"
+        android:gravity="center"
+        android:text=""/>
 
     <Button
-        android:layout_width="wrap_content"
+        android:id="@+id/load_pad_button"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:id="@+id/login_button"
-        android:layout_below="@+id/password"
-        android:layout_alignLeft="@+id/password"
-        android:layout_marginLeft="11dp" />
+        android:text="Edit Pad"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Register"
-        android:id="@+id/enroll_button"
-        android:layout_below="@+id/password"
-        android:layout_alignParentRight="true" />
-
-</RelativeLayout>
+</LinearLayout>
